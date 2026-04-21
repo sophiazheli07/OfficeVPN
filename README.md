@@ -29,12 +29,14 @@ CREATE TABLE users (
 INSERT INTO users (username, password) VALUES ('admin', '12345');
 ```
 ## 2. start the vpn server 
+```bash
 mvn compile
 java -cp target/classes com.vpn.server.VPNServer
-
+```
 ## launch the client
+```bash
 mvn javafx:run
-
+```
 ## project structure
 
 1.encapsulation: i separated the `DatabaseManager` from the UI to follow the Single Responsibility Principle.
