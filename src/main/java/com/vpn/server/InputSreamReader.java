@@ -1,5 +1,5 @@
-package com.vpn.server;
+// package com.vpn.server;
 
-public class InputSreamReader {
+// public class InputSreamReader {
 
-}
+// }

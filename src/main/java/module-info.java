@@ -1,7 +1,6 @@
 module OfficeVPN {
     requires javafx.controls;
     requires javafx.fxml;
-    // Add 'transitive' here to fix the Stage visibility error
     requires transitive javafx.graphics; 
     requires java.sql;
 

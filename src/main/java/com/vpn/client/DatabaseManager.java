@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class DatabaseManager {
     private static final String URL = "jdbc:mysql://localhost:3306/office_vpn"; 
     private static final String USER = "root"; 
-    private static final String PASS = "Sophia.zheli07";
+    private static final String PASS = "*******"; // add your MySQL password 
 
     public static boolean validateLogin(String username, String password){
         String query = "SELECT * FROM users WHERE username = ? AND password = ?";
