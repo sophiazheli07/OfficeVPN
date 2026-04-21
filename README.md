@@ -40,5 +40,7 @@ mvn javafx:run
 ## project structure
 
 1.encapsulation: i separated the `DatabaseManager` from the UI to follow the Single Responsibility Principle.
+
 2.concurrency: i used JavaFX `Task` to keep the UI responsive while performing network I/O in the background.
+
 3.persistence: the socket connection stays open after the handshake to allow for continuous monitoring of activity.
