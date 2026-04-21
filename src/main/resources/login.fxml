@@ -1,0 +1,6 @@
+<AnchorPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.vpn.ui.LoginController">
+    <children>
+        <Button fx:id="loginButton" text="Connect" onAction="#handleLogin"/>
+    </children>
+</AnchorPane>
