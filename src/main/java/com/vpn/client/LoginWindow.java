@@ -13,6 +13,8 @@ public class LoginWindow extends Application {
 
     @Override
     public void start(@SuppressWarnings("exports") Stage primaryStage) {
+        DatabaseManager.printAllUsers(); // Debugging: Print all users in the database to verify connection and data retrieval
+        
         Label label = new Label("Office VPN Login");
         label.setStyle("-fx-font-size: 20px; -fx-font-weight: bold;");
 
@@ -30,8 +32,11 @@ public class LoginWindow extends Application {
         loginBtn.setOnAction(e -> {
             String user = usernameField.getText();
             String pass = passwordField.getText();
+            DatabaseManager.debugLogin(user, pass);
 
-            if(user.equals("admin") && pass.equals("12345")) {
+            boolean loginSuccessful = DatabaseManager.validateLogin(user, pass);
+
+            if(loginSuccessful) {
                 System.out.println("Login successful! Connecting to VPN...");
                 label.setText("Status: Connected");
                 label.setStyle("-fx-text-fill: green; -fx-font-size: 16px;");
